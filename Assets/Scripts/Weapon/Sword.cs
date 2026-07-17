@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Weapon1 : Weapon
+public class Sword : Weapon
 {
     public const string ANIM_PARM_ISATTACK = "IsAttack";
     private Animator anim;
@@ -12,5 +12,16 @@ public class Weapon1 : Weapon
     public override void Attack()
     {
         anim.SetTrigger(ANIM_PARM_ISATTACK);
+    }
+    private void Update()
+    {
+
+    }
+    public void OnTriggerEnter(Collider other)
+    {
+        if(other.tag == "Enemy")
+        {
+
+        }
     }
 }
